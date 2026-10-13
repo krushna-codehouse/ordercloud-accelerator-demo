@@ -1,0 +1,21 @@
+{
+  "name": "oc-accelerator-infrastructure",
+  "version": "1.0.0",
+  "description": "OrderCloud marketplace setup tool for the accelerator (creates API clients, registers the OrderCheckout integration event + webhook, and writes the apps' .env.local files)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "tsx src/index.ts seed",
+    "env": "tsx src/index.ts env",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "ordercloud-javascript-sdk": "^11.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}

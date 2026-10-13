@@ -1,0 +1,38 @@
+Objects:
+  Products: 
+    - ID: productA
+      Name: productA
+  PriceSchedules: 
+    - ID: productA
+      Name: productA
+      Currency: USD
+    - ID: priceB
+      Name: priceB
+      Currency: USD  
+      PriceBreaks:
+        - Quantity: 1
+          Price: 0
+          SalePrice: null
+  Catalogs: 
+    - ID: US-catalog
+      Name: United States
+  Buyers:
+    - ID: US
+      Name: United States
+Assignments:
+  CatalogAssignments:
+    - BuyerID: US
+      CatalogID: US-catalog
+  ProductCatalogAssignment:
+    - ProductID: productA
+      CatalogID: US-catalog
+  ProductAssignments:
+    - ProductID: productA
+      BuyerID: US
+      PriceScheduleID: productA-US
+    - ProductID: productA
+      BuyerID: US
+      PriceScheduleID: productA
+    - ProductID: productA
+      BuyerID: US
+      PriceScheduleID: priceB

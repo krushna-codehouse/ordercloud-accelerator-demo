@@ -1,0 +1,8 @@
+Objects:
+  Buyers:
+      - ID: buyer
+        Name: metrocoffeebuyer
+  CreditCards:
+      - ID: costcenter
+        BuyerID: buyer
+        ExpirationDate: "not a date"

@@ -1,0 +1,24 @@
+node_modules/
+dist/
+build/
+.next/
+
+# Local config — real credentials live here, never commit
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+*.tsbuildinfo
+apps/seeding/exe/
+apps/seeding/ncc/
+
+# Scraper output
+output/
+
+# Editor / OS / tooling
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/

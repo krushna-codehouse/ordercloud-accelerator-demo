@@ -1,0 +1,99 @@
+Objects:
+  Products:
+    - OwnerID: <MarketplaceID placeholder>
+      ID: product1
+      Name: product1!@#$
+      Description: >-
+        A luxurious fabric, mulberry silk is named for the mulberry leaves the
+        uniquely bred silkworms feed on. A mask for your face.
+      QuantityMultiplier: 1
+      Active: true
+  Specs:
+    - ID: color
+      Name: color
+      DefinesVariant: true
+      DefaultOptionID: red
+      Required: true
+    - ID: size
+      Name: size
+      DefinesVariant: true
+      Required: true
+      DefaultOptionID: S
+    - ID: material
+      Name: material
+      DefinesVariant: false
+      DefaultOptionID: cotton
+      Required: true
+  SpecOptions:
+    - ID: red
+      SpecID: color
+      Value: red
+    - ID: blue
+      SpecID: color
+      Value: blue
+    - ID: S
+      SpecID: size
+      Value: S
+    - ID: M
+      SpecID: size
+      Value: M
+    - ID: L
+      SpecID: size
+      Value: L
+    - ID: cotton
+      SpecID: material
+      Value: cotton
+    - ID: wool
+      SpecID: material
+      Value: wool
+  Variants:
+    - ID: missing-product-ID
+    - ID: bad-product-ID
+      ProductID: productzz
+    - ID: missing-specs
+      ProductID: product1
+    - ID: missing-size
+      ProductID: product1
+      Specs: 
+        - SpecID: color
+          OptionID: blue
+    - ID: bad-size-option
+      ProductID: product1
+      Specs: 
+        - SpecID: color
+          OptionID: blue
+        - SpecID: size
+          OptionID: XX
+    - ID: perfect
+      ProductID: product1
+      Specs: 
+        - SpecID: color
+          OptionID: blue
+        - SpecID: size
+          OptionID: M
+    - ID: two-entries-for-spec
+      ProductID: product1
+      Specs: 
+        - SpecID: color
+          OptionID: blue
+        - SpecID: size
+          OptionID: M
+        - SpecID: size
+          OptionID: L
+    - ID: extra-bad-spec
+      ProductID: product1
+      Specs: 
+        - SpecID: color
+          OptionID: blue
+        - SpecID: size
+          OptionID: L
+        - SpecID: material
+          OptionID: wool   
+Assignments:
+  SpecProductAssignments:
+    - SpecID: color
+      ProductID: product1
+    - SpecID: size
+      ProductID: product1
+    - SpecID: material
+      ProductID: product1
